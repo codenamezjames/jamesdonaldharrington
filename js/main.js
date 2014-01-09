@@ -1,7 +1,21 @@
 jQuery(document).ready(function($) {
-	var header_height = $("header").height()
-	var article_height = $("article").height()
-	var footer_height = $("footer").height()
+	$('head').load('tpl/head.html');
+	$('header').load('tpl/header.html');
+	if($('.resume')){
+		$('.resume').load("tpl/resume.html");
+	}
+	$('footer').load('tpl/footer.html', function(){
+		var header_height = $("header").height()
+		var article_height = $("article").height()
+		var footer_height = $("footer").height()
+
+		$(".push").height( $(window).height() - header_height - article_height - footer_height )
+		$(window).resize(function(event) {
+			$(".push").height( $(window).height() - header_height - article_height - footer_height )
+		});
+		$('body').show();
+	});
+	
 
 
 
@@ -45,11 +59,7 @@ jQuery(document).ready(function($) {
 
 
 	
-	$(".push").height( $(window).height() - header_height - article_height - footer_height )
-
-	$(window).resize(function(event) {
-		$(".push").height( $(window).height() - header_height - article_height - footer_height )
-	});
+	
 
 
 	$("form").submit(function(e){
