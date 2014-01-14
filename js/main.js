@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+	$.ajax({async:false})
 	$('head').load('tpl/head.html');
 	$('header').load('tpl/header.html');
 	if($('.resume')){
@@ -14,11 +15,22 @@ jQuery(document).ready(function($) {
 			$(".push").height( $(window).height() - header_height - article_height - footer_height )
 		});
 		$('body').show();
+		
 	});
-	
+	if(location.pathname.slice(-8) == "web.html" || location.pathname.slice(-11) == "mobile.html"){
+	$.getJSON('data/data.json', function(data) {
+		console.log(data)
+		web = data.web;
+		mobile = data.mobile;
 
-
-
+		$.each(web, function(index, site) {
+			$("#web_json").append('<li><a href="'+site.url+'"><img src="http://placehold.it/200x200"></a></li>')
+		});
+		$.each(mobile, function(index, site) {
+			$("#mobile_json").append('<li><a href="'+site.url+'"><img src="http://placehold.it/200x200"></a></li>')
+		});
+	});
+	}
 
 	function validate(form){
 
@@ -54,13 +66,6 @@ jQuery(document).ready(function($) {
 			return false;
 		}else{return true}
 	};
-
-
-
-
-	
-	
-
 
 	$("form").submit(function(e){
 		$("#sliderVal").val($("#slider").slider( "value" ));
