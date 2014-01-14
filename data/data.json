@@ -1,0 +1,47 @@
+{
+	"web":{
+		"site1":{
+			"title": "Motto Creative",
+			"url": "http://mottocreative.com",
+			"img": "img/motto.png"
+		},
+		"site2":{
+			"title": "James Donald Harrington",
+			"url": "http://jamesdonaldharrington.com",
+			"img": "img/james.png"
+		},
+		"site3":{
+			"title": "Barker And Sons",
+			"url": "http://barker.ideaworksinteractive.com/",
+			"img": "img/barker.png"
+		},
+		"site4":{
+			"title": "Bit Mix",
+			"url": "http://bitmix.com",
+			"img": "img/bit.png"
+		},
+		"site5": {
+			"title": "Ideaworks",
+			"url": "http://collegefrog.com",
+			"img": "img/idea.png"	
+		},
+		"site5": {
+			"title": "Six Reasons",
+			"url": "http://sixreasons.net/",
+			"img": "img/six.png"	
+		}
+	},
+	"mobile":{
+		"site1":{
+			"title": "Eden Mobile",
+			"url": "http://edencondominom.com",
+			"img": "img/motto.png"
+		},
+		"site2": {
+			"title": "James Donald Harrington",
+			"url": "http://jamesdonaldharrington.com",
+			"img": "img/James_m.png"	
+		}
+	}
+	
+}
