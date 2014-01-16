@@ -1,4 +1,20 @@
 jQuery(document).ready(function($) {
+	function getURLParameters(url)
+{
+  
+    var result = {};
+    var searchIndex = url.indexOf("?");
+    if (searchIndex == -1 ) return result;
+    var sPageURL = url.substring(searchIndex +1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++)
+    {     
+        var sParameterName = sURLVariables[i].split('=');      
+        result[sParameterName[0]] = sParameterName[1];
+    }
+    return result;
+}
+
 	$.ajax({async:false})
 	$('head').load('tpl/head.html');
 	$('header').load('tpl/header.html');
@@ -17,20 +33,60 @@ jQuery(document).ready(function($) {
 		$('body').show();
 		
 	});
-	if(location.pathname.slice(-8) == "web.html" || location.pathname.slice(-11) == "mobile.html"){
-	$.getJSON('data/data.json', function(data) {
-		console.log(data)
-		web = data.web;
-		mobile = data.mobile;
 
-		$.each(web, function(index, site) {
-			$("#web_json").append('<li><a href="'+site.url+'"><img src="http://placehold.it/200x200"></a></li>')
+
+
+
+	if(location.pathname.slice(-8) == "web.html" || location.pathname.slice(-11) == "mobile.html"){
+		$.getJSON('data/data.json', function(data) {
+			web = data.web;
+			mobile = data.mobile;
+
+			$.each(web, function(index, site) {
+				$("#web_json").append('<li><a href="project.html?id='+site.id+'"><img src="http://placehold.it/400x400"></a></li>')
+			});
+			$.each(mobile, function(index, site) {
+				$("#mobile_json").append('<li><a href="project.html?id='+site.id+'"><img src="http://placehold.it/400x400"></a></li>')
+			});
 		});
-		$.each(mobile, function(index, site) {
-			$("#mobile_json").append('<li><a href="'+site.url+'"><img src="http://placehold.it/200x200"></a></li>')
-		});
-	});
 	}
+
+	if(location.pathname.slice(-12) == "project.html"){
+		url_params = getURLParameters(document.URL)
+		if (url_params.id){
+			$.getJSON('data/data.json', function(data) {
+				web = data.web;
+				mobile = data.mobile;
+				$.each(data, function(ind, cat) {
+					$.each(cat, function(index, val) {
+
+						 if(val.id == url_params.id){
+						 	$("article").find('#title').html(val.title)
+						 	$("article").find('#info').html(val.info)
+
+						 	$.each(val.imgs, function(i, v) {
+						 		$("article").find('#imageHolder').append('<img src="http://placehold.it/600x300"><br><br>')
+						 	});
+						 	
+
+						 }
+					});
+				});
+
+				
+			});
+		}else{
+			window.location.href = "/project.html?id=1";
+		}
+
+	}
+
+
+
+
+
+
+
 
 	function validate(form){
 

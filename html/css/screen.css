@@ -104,6 +104,10 @@ article h2{
 	margin-top: 40px;
 	padding: 0 110px 0 110px;
 }
+article #title{
+	margin-top: 0 !important;
+	padding: 0 !important;
+}
 .five-k{
 	padding-left: 25%;
 }

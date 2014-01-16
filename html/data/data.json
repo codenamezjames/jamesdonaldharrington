@@ -1,46 +1,110 @@
 {
 	"web":{
 		"site1":{
+			"id":"1",
 			"title": "Motto Creative",
 			"url": "http://mottocreative.com",
-			"img": "img/motto.png"
+			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
+			"img": "img/motto.png",
+			"imgs":{
+				"image1":"img/site1/image1.png",
+				"image2":"img/site1/image2.png",
+				"image3":"img/site1/image3.png",
+				"image4":"img/site1/image4.png"
+			}
 		},
 		"site2":{
+			"id":"2",
 			"title": "James Donald Harrington",
 			"url": "http://jamesdonaldharrington.com",
-			"img": "img/james.png"
+			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
+			"img": "img/james.png",
+			"imgs":{
+				"image1":"img/site1/image1.png",
+				"image2":"img/site1/image2.png",
+				"image3":"img/site1/image3.png",
+				"image4":"img/site1/image4.png"
+			}
 		},
 		"site3":{
+			"id":"3",
 			"title": "Barker And Sons",
 			"url": "http://barker.ideaworksinteractive.com/",
-			"img": "img/barker.png"
+			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
+			"img": "img/barker.png",
+			"imgs":{
+				"image1":"img/site1/image1.png",
+				"image2":"img/site1/image2.png",
+				"image3":"img/site1/image3.png",
+				"image4":"img/site1/image4.png"
+			}
 		},
 		"site4":{
+			"id":"4",
 			"title": "Bit Mix",
 			"url": "bitmix/index.html",
-			"img": "img/bit.png"
+			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
+			"img": "img/bit.png",
+			"imgs":{
+				"image1":"img/site1/image1.png",
+				"image2":"img/site1/image2.png",
+				"image3":"img/site1/image3.png",
+				"image4":"img/site1/image4.png"
+			}
 		},
 		"site5": {
+			"id":"5",
 			"title": "Ideaworks",
 			"url": "http://collegefrog.com",
-			"img": "img/idea.png"	
+			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
+			"img": "img/idea.png",
+			"imgs":{
+				"image1":"img/site1/image1.png",
+				"image2":"img/site1/image2.png",
+				"image3":"img/site1/image3.png",
+				"image4":"img/site1/image4.png"
+			}	
 		},
-		"site5": {
+		"site6": {
+			"id":"6",
 			"title": "Six Reasons",
 			"url": "http://sixreasons.net/",
-			"img": "img/six.png"	
+			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
+			"img": "img/six.png",
+			"imgs":{
+				"image1":"img/site1/image1.png",
+				"image2":"img/site1/image2.png",
+				"image3":"img/site1/image3.png",
+				"image4":"img/site1/image4.png"
+			}	
 		}
 	},
 	"mobile":{
 		"site1":{
+			"id":"7",
 			"title": "Eden Mobile",
 			"url": "http://edencondominom.com",
-			"img": "img/motto.png"
+			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
+			"img": "img/motto.png",
+			"imgs":{
+				"image1":"img/site1/image1.png",
+				"image2":"img/site1/image2.png",
+				"image3":"img/site1/image3.png",
+				"image4":"img/site1/image4.png"
+			}
 		},
 		"site2": {
+			"id":"8",
 			"title": "James Donald Harrington",
 			"url": "http://jamesdonaldharrington.com",
-			"img": "img/James_m.png"	
+			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
+			"img": "img/James_m.png",
+			"imgs":{
+				"image1":"img/site1/image1.png",
+				"image2":"img/site1/image2.png",
+				"image3":"img/site1/image3.png",
+				"image4":"img/site1/image4.png"
+			}	
 		}
 	}
 	
