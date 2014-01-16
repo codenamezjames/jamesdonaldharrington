@@ -17,24 +17,26 @@ jQuery(document).ready(function($) {
 
 	$.ajax({async:false})
 	$('head').load('tpl/head.html');
+	$('head').append('<link rel="stylesheet" href="css/screen.css">')
+	
 	$('header').load('tpl/header.html');
 	if($('.resume')){
 		$('.resume').load("tpl/resume.html");
 	}
-	$('footer').load('tpl/footer.html', function(){
-		var header_height = $("header").height()
-		var article_height = $("article").height()
-		var footer_height = $("footer").height()
+	// $('footer').load('tpl/footer.html', function(){
+	// 	var header_height = $("header").height()
+	// 	var article_height = $("article").height()
+	// 	var footer_height = $("footer").height()
 
-		$(".push").height( $(window).height() - header_height - article_height - footer_height )
-		$(window).resize(function(event) {
-			$(".push").height( $(window).height() - header_height - article_height - footer_height )
-		});
-		$('body').show();
+	// 	$(".push").height( $(window).height() - header_height - article_height - footer_height )
+	// 	$(window).resize(function(event) {
+	// 		$(".push").height( $(window).height() - header_height - article_height - footer_height )
+	// 	});
 		
-	});
+		
+	// });
 
-
+	$('body').show();
 
 
 	if(location.pathname.slice(-8) == "web.html" || location.pathname.slice(-11) == "mobile.html"){
@@ -65,7 +67,7 @@ jQuery(document).ready(function($) {
 						 	$("article").find('#info').html(val.info)
 
 						 	$.each(val.imgs, function(i, v) {
-						 		$("article").find('#imageHolder').append('<img src="http://placehold.it/600x300"><br><br>')
+						 		$("article").find('#imageHolder').append('<img src="http://placehold.it/637x300&text='+ i +'"><br><br>')
 						 	});
 						 	
 
@@ -80,6 +82,9 @@ jQuery(document).ready(function($) {
 		}
 
 	}
+
+
+
 
 
 
