@@ -44,10 +44,14 @@ jQuery(document).ready(function($) {
 			mobile = data.mobile;
 
 			$.each(web, function(index, site) {
-				$("#web_json").append('<li><a href="project.html?id='+site.id+'"><img src="http://placehold.it/400x400"></a></li>')
+				if (site.display) {
+					$("#web_json").append('<li class="cover"><a href="project.html?id='+site.id+'"><img src="'+ site.img +'"></a></li>')
+				};
 			});
 			$.each(mobile, function(index, site) {
-				$("#mobile_json").append('<li><a href="project.html?id='+site.id+'"><img src="http://placehold.it/400x400"></a></li>')
+				if (site.display) {
+					$("#mobile_json").append('<li class="cover"><a href="project.html?id='+site.id+'"><img src="'+ site.img +'"></a></li>')
+				}
 			});
 		});
 	}
@@ -56,6 +60,13 @@ jQuery(document).ready(function($) {
 		url_params = getURLParameters(document.URL)
 		if (url_params.id){
 			$.getJSON('data/data.json', function(data) {
+				web = data.web;
+				mobile = data.mobile;
+				
+				$("article").find('#list').append('<option value="" id="list_item">--Web--</option>')
+				$.each(web, function(index, val) {
+					$("article").find('#list').append('<option value="'+val.id+'" id="list_item">'+val.title+'</option>')
+				});
 				web = data.web;
 				mobile = data.mobile;
 				
@@ -76,7 +87,29 @@ jQuery(document).ready(function($) {
 						 	$("article").find('#info').html(val.info)
 
 						 	$.each(val.imgs, function(i, v) {
-						 		$("article").find('#imageHolder').append('<img src="http://placehold.it/637x300&text='+ i +'"><br><br>')
+						 		$("article").find('#imageHolder').append('<img src="'+ v +'"><br><br>')
+						 	});
+
+						}
+					});
+				});
+			});
+			$("article").on('change', '#list', function(event) {
+				event.preventDefault();
+				$("article").find('#list').append('<option value="" id="list_item"></option><option value="" id="list_item">--Mobile--</option>')
+				$.each(mobile, function(index, val) {
+					$("article").find('#list').append('<option value="'+val.id+'" id="list_item">'+val.title+'</option>')
+				});
+
+				$.each(data, function(ind, cat) {
+					$.each(cat, function(index, val) {
+
+						if(val.id == url_params.id){
+						 	$("article").find('#title').html(val.title)
+						 	$("article").find('#info').html(val.info)
+
+						 	$.each(val.imgs, function(i, v) {
+						 		$("article").find('#imageHolder').append('<img src="'+ v +'"><br><br>')
 						 	});
 
 						}
@@ -104,7 +137,7 @@ jQuery(document).ready(function($) {
 	
 
 
-	if ($('.floater')){
+	if ($('.floater').html()){
 		
 		$(window).scroll(function(event) {
 			// console.log($(window).scrollTop())
@@ -116,8 +149,15 @@ jQuery(document).ready(function($) {
 		});
 	}
 
-
-
+	$.getJSON('data/data.json', function(data) {
+			$.each(data, function(index, web_mob) {
+				 $.each(web_mob, function(index, val) {
+				 	if (val.proud === true){
+				 	 	$('.works').append(' '+val.title + ',')
+				 	}
+				 });
+			});
+	});
 
 
 

@@ -2,10 +2,12 @@
 	"web":{
 		"site1":{
 			"id":"1",
+			"display":false,
 			"title": "Motto Creative",
 			"url": "http://mottocreative.com",
 			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
-			"img": "img/motto.png",
+			"proud": true,
+			"img": "img/400x400.gif",
 			"imgs":{
 				"image1":"img/site1/image1.png",
 				"image2":"img/site1/image2.png",
@@ -15,90 +17,97 @@
 		},
 		"site2":{
 			"id":"2",
+			"display":true,
 			"title": "James Donald Harrington",
 			"url": "http://jamesdonaldharrington.com",
 			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
-			"img": "img/james.png",
+			"proud": true,
+			"img": "img/jamesdonaldharrington/image1.png",
 			"imgs":{
-				"image1":"img/site1/image1.png",
-				"image2":"img/site1/image2.png",
-				"image3":"img/site1/image3.png",
-				"image4":"img/site1/image4.png"
+				"image1":"img/jamesdonaldharrington/image1.png",
+				"image2":"img/jamesdonaldharrington/image2.png"
 			}
 		},
 		"site3":{
 			"id":"3",
+			"display":true,
 			"title": "Barker And Sons",
 			"url": "http://barker.ideaworksinteractive.com/",
 			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
-			"img": "img/barker.png",
+			"proud": false,
+			"img": "img/barker/image1.png",
 			"imgs":{
-				"image1":"img/site1/image1.png",
-				"image2":"img/site1/image2.png",
-				"image3":"img/site1/image3.png",
-				"image4":"img/site1/image4.png"
+				"image1":"img/barker/image1.png",
+				"image2":"img/barker/image2.png"
 			}
 		},
 		"site4":{
 			"id":"4",
+			"display":true,
 			"title": "Bit Mix",
 			"url": "bitmix/index.html",
 			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
-			"img": "img/bit.png",
+			"proud": true,
+			"img": "img/bitmix/image1.png",
 			"imgs":{
-				"image1":"img/site1/image1.png",
-				"image2":"img/site1/image2.png",
-				"image3":"img/site1/image3.png",
-				"image4":"img/site1/image4.png"
+				"image1":"img/bitmix/image1.png",
+				"image2":"img/bitmix/image2.png",
+				"image3":"img/bitmix/image3.png"
 			}
 		},
 		"site5": {
 			"id":"5",
+			"display":true,
 			"title": "Ideaworks",
 			"url": "http://collegefrog.com",
 			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
-			"img": "img/idea.png",
+			"proud": true,
+			"img": "img/ideaworks/image1.png",
 			"imgs":{
-				"image1":"img/site1/image1.png",
-				"image2":"img/site1/image2.png",
-				"image3":"img/site1/image3.png",
-				"image4":"img/site1/image4.png"
+				"image1":"img/ideaworks/image1.png",
+				"image2":"img/ideaworks/image2.png",
+				"image3":"img/ideaworks/image3.png"
 			}	
 		},
 		"site6": {
 			"id":"6",
+			"display":true,
 			"title": "Six Reasons",
 			"url": "http://sixreasons.net/",
 			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
-			"img": "img/six.png",
+			"proud": true,
+			"img": "img/sixreasons/image1.png",
 			"imgs":{
-				"image1":"img/site1/image1.png",
-				"image2":"img/site1/image2.png",
-				"image3":"img/site1/image3.png",
-				"image4":"img/site1/image4.png"
+				"image1":"img/sixreasons/image1.png",
+				"image2":"img/sixreasons/image2.png",
+				"image3":"img/sixreasons/image3.png"
 			}	
 		}
 	},
 	"mobile":{
 		"site1":{
 			"id":"7",
+			"display":true,
 			"title": "Eden Mobile",
 			"url": "http://edencondominom.com",
 			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
-			"img": "img/motto.png",
+			"proud": false,
+			"img": "img/eden/image1.png",
 			"imgs":{
-				"image1":"img/site1/image1.png",
-				"image2":"img/site1/image2.png",
-				"image3":"img/site1/image3.png",
-				"image4":"img/site1/image4.png"
+				"image1":"img/eden/image1.png",
+				"image2":"img/eden/image2.png",
+				"image3":"img/eden/image3.png",
+				"image4":"img/eden/image4.png"
 			}
 		},
 		"site2": {
 			"id":"8",
+			"display":true,
 			"title": "James Donald Harrington",
 			"url": "http://jamesdonaldharrington.com",
 			"info": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, possimus quae cumque maiores cum dolorum error? Optio, sit, nobis, tempora, sint facere tempore libero dolorum natus magnam nulla eum inventore.",
-			"img": "img/James_m.png",
+			"proud": false,
+			"img": "img/400x400.gif",
 			"imgs":{
 				"image1":"img/site1/image1.png",
 				"image2":"img/site1/image2.png",

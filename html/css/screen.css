@@ -118,6 +118,22 @@ article #title{
 #list{
 	margin-top: 20px;
 }
+#imageHolder img{
+	box-shadow: 1px 1px 3px #555;
+	margin-bottom: 30px;
+}
+.cover{
+	width: 30%!important;
+	margin-right: 1%;
+	padding: 0!important;
+	margin-bottom: 10px;
+	height: 254px!important;
+	overflow: hidden;
+	box-shadow: 2px 2px 4px rgba(68, 68, 68, 0.5);
+}
+.cover img{
+	width: 100%;
+}
 /**************************************************************************************
 	ARTICLE END
 ***************************************************************************************
