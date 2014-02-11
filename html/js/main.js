@@ -16,11 +16,11 @@ jQuery(document).ready(function($) {
 }
 
 	$.ajax({async:false})
-	$('head').append('<link rel="stylesheet" href="css/screen.css">')
+
 	
-	$('header').load('tpl/header.html');
+	$('header').load('/tpl/header.html');
 	if($('.resume')){
-		$('.resume').load("tpl/resume.html");
+		$('.resume').load("/tpl/resume.html");
 	}
 	// $('footer').load('tpl/footer.html', function(){
 	// 	var header_height = $("header").height()
@@ -39,7 +39,7 @@ jQuery(document).ready(function($) {
 
 
 	if(location.pathname.slice(-8) == "web.html" || location.pathname.slice(-11) == "mobile.html"){
-		$.getJSON('data/data.json', function(data) {
+		$.getJSON('/data/data.json', function(data) {
 			web = data.web;
 			mobile = data.mobile;
 
@@ -59,24 +59,21 @@ jQuery(document).ready(function($) {
 	if(location.pathname.slice(-12) == "project.html"){
 		url_params = getURLParameters(document.URL)
 		if (url_params.id){
-			$.getJSON('data/data.json', function(data) {
+			$.getJSON('/data/data.json', function(data) {
 				web = data.web;
 				mobile = data.mobile;
 				
 				$("article").find('#list').append('<option value="" id="list_item">--Web--</option>')
 				$.each(web, function(index, val) {
-					$("article").find('#list').append('<option value="'+val.id+'" id="list_item">'+val.title+'</option>')
-				});
-				web = data.web;
-				mobile = data.mobile;
-				
-				$("article").find('#list').append('<option value="" id="list_item">--Web--</option>')
-				$.each(web, function(index, val) {
-					$("article").find('#list').append('<option value="'+val.id+'" id="list_item">'+val.title+'</option>')
+					if (val.display) {
+						$("article").find('#list').append('<option value="'+val.id+'" id="list_item">'+val.title+'</option>')
+					}
 				});
 				$("article").find('#list').append('<option value="" id="list_item"></option><option value="" id="list_item">--Mobile--</option>')
 				$.each(mobile, function(index, val) {
-					$("article").find('#list').append('<option value="'+val.id+'" id="list_item">'+val.title+'</option>')
+					if (val.display) {
+						$("article").find('#list').append('<option value="'+val.id+'" id="list_item">'+val.title+'</option>')
+					}
 				});
 
 				$.each(data, function(ind, cat) {
@@ -93,13 +90,10 @@ jQuery(document).ready(function($) {
 						}
 					});
 				});
-			});
+			
 			$("article").on('change', '#list', function(event) {
 				event.preventDefault();
-				$("article").find('#list').append('<option value="" id="list_item"></option><option value="" id="list_item">--Mobile--</option>')
-				$.each(mobile, function(index, val) {
-					$("article").find('#list').append('<option value="'+val.id+'" id="list_item">'+val.title+'</option>')
-				});
+				
 
 				$.each(data, function(ind, cat) {
 					$.each(cat, function(index, val) {
@@ -119,6 +113,7 @@ jQuery(document).ready(function($) {
 			$("article").on('change', '#list', function(event) {
 				event.preventDefault();
 				window.location.href = ("/project.html?id="+$(this).find(':selected').attr('value'))
+			});
 			});
 		}else{
 			window.location.href = "/project.html?id=1";
@@ -149,7 +144,7 @@ jQuery(document).ready(function($) {
 		});
 	}
 
-	$.getJSON('data/data.json', function(data) {
+	$.getJSON('/data/data.json', function(data) {
 			$.each(data, function(index, web_mob) {
 				 $.each(web_mob, function(index, val) {
 				 	if (val.proud === true){
